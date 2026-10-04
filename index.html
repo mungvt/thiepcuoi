@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thiệp Mời Lễ Thành Hôn Việt Hoàng & Thu Huệ</title>
+<meta property="og:title" content="Thiệp Mời Lễ Thành Hôn Việt Hoàng & Thu Huệ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400&family=Lobster&family=Barlow+Semi+Condensed:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#6b2420; --red2:#7d1a17; --ink:#222; --cream:#f3eee3;
+    --paper:url("https://content.pancake.vn/1/fwebp90/30/b8/36/c3/adbd7c15468912f0a927de21a27c72714ae06edde2be43a1cc62dea2-w:1024-h:1536-l:2257782-t:image/png.png");
+    --leaves:url("https://content.pancake.vn/1/fwebp90/70/9f/d6/5e/19d5123521ffb7d85d46c600caeb5f071a84f2df3eaf64d066f66759-w:420-h:800-l:78946-t:image/png.png");
+    --flower:url("https://content.pancake.vn/1/s523x523/fwebp90/c6/8a/de/e1/0ff1d876e8e29fd34760cdc2cd78d39e421d6b627b9d3d33fbd9334b-w:1024-h:1024-l:2158345-t:image/png.png");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#e9e4d8;font-family:Tinos,serif;color:var(--ink);overflow-x:hidden}
+  .page{max-width:420px;margin:0 auto;background:var(--cream) var(--paper) repeat-y center top/100% auto;position:relative;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,.12)}
+  section{position:relative;padding:28px 18px;text-align:center}
+  img{display:block;max-width:100%}
+  .script{font-family:"Great Vibes",cursive;font-weight:400}
+  .dance{font-family:"Dancing Script",cursive}
+  .lobster{font-family:Lobster,cursive}
+  .barlow{font-family:"Barlow Semi Condensed",sans-serif}
+
+  /* reveal animation */
+  .rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+  .rv.l{transform:translateX(-40px)} .rv.r{transform:translateX(40px)} .rv.z{transform:scale(.85)}
+  .rv.in{opacity:1;transform:none}
+
+  /* HERO */
+  .hero{min-height:780px;padding-top:0}
+  .corner{position:absolute;inset:0;background:var(--leaves) no-repeat top center/100% auto;pointer-events:none;z-index:2}
+  .corner.b{top:auto;bottom:0;height:400px;background-position:bottom center;transform:scaleY(-1)}
+  .arch-wrap{position:relative;width:280px;margin:100px auto 0;}
+  .arch{width:272px;height:406px;border-radius:136px 136px 0 0;overflow:hidden;border:2px solid #fff;outline:1px solid #c8bfae;outline-offset:5px;margin:0 auto}
+  .arch img{width:100%;height:100%;object-fit:cover}
+  .fl{position:absolute;width:123px;height:123px;background:var(--flower) center/contain no-repeat;z-index:3}
+  .fl.tl{left:-30px;top:20px} .fl.br{right:-38px;bottom:-60px;transform:rotate(180deg)}
+  .savedate{position:absolute;right:-52px;top:-68px;width:200px;height:200px;z-index:3;font-family:"Great Vibes",cursive;font-size:40px}
+  .savedate text{fill:#222}
+  .hero h1{font-weight:400;font-size:24px;margin-top:66px;letter-spacing:1px}
+  .hero .names{font-size:clamp(30px,10vw,42px);margin-top:6px;white-space:nowrap}
+  .hero .names span{font-size:.65em;margin:0 8px}
+
+  /* FAMILY */
+  .quote{font-size:21px;line-height:1.55}
+  .fam{display:flex;gap:14px;align-items:center;margin-top:12px;text-align:center}
+  .fam.rev{flex-direction:row-reverse}
+  .fam .ph{flex:0 0 52%;border-radius:8px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+  .fam .ph img{width:100%;aspect-ratio:2/3;object-fit:cover}
+  .fam .info{flex:1}
+  .fam h3{font-weight:400;font-size:24px;margin-bottom:12px}
+  .fam .par{font-family:Lobster,cursive;font-size:16px;line-height:1.7}
+  .fam .addr{font-size:14px;line-height:1.55;margin-top:10px}
+  .fam .role{font-size:22px;margin-top:14px}
+  .fam .who{font-size:32px;line-height:1.2;white-space:nowrap}
+  .heart-print{position:absolute;width:56px;height:57px;background:url("https://content.pancake.vn/web-media/63/d6/11/fa/965b67759bbb9e3df5d49381aaf6ab8668365cf59e2f74fddf9712f8-w:200-h:203-l:19834-t:image/png.png") center/contain no-repeat;animation:beat 1.4s infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+
+  /* INVITE */
+  .trio{position:relative;height:310px;margin:10px 0 20px}
+  .trio .p{position:absolute;border:5px solid #fff;box-shadow:0 6px 16px rgba(0,0,0,.2);overflow:hidden}
+  .trio .p img{width:100%;height:100%;object-fit:cover}
+  .trio .p1{left:-6px;top:18px;width:150px;height:226px;transform:rotate(-6deg)}
+  .trio .p2{left:118px;top:28px;width:146px;height:220px;z-index:2}
+  .trio .p3{right:-6px;top:0;width:160px;height:240px;transform:rotate(6deg)}
+  .invite-title{font-size:38px;color:var(--red)}
+  .invite-sub{font-size:16px;letter-spacing:.5px;margin-top:6px;font-weight:700}
+  .event{margin-top:34px}
+  .event .t{font-size:33px;line-height:1.2}
+  .event .lead{font-size:20px;margin-top:2px}
+  .when{display:flex;align-items:center;justify-content:center;margin:16px 0 8px}
+  .when .hr{font-weight:700;font-size:20px;padding-right:18px;min-width:120px}
+  .when .d{border-left:1.5px solid #333;padding-left:18px;min-width:120px}
+  .when .d small{display:block;font-size:15px}
+  .when .d b{display:block;font-size:56px;line-height:1.1;font-weight:700}
+  .lunar{font-size:14px;letter-spacing:1px}
+  .place{font-size:20px;margin-top:14px}
+  .addr2{font-size:16px;line-height:1.5;margin-top:10px}
+  .divider{width:60%;height:2px;background:#222;margin:22px auto 0}
+
+  /* MAP */
+  .btn{display:inline-block;background:var(--red2);color:#fff;font-family:"Barlow Semi Condensed",sans-serif;font-weight:700;font-size:15px;padding:12px 26px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 4px 10px rgba(107,36,32,.35);transition:transform .2s}
+  .btn:active{transform:scale(.96)}
+  .loc h2{font-size:38px;font-weight:400}
+  .loc .barlow{font-size:18px;line-height:1.5}
+  .map{margin-top:18px;border-radius:6px;overflow:hidden;height:300px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+  .map iframe{width:100%;height:100%;border:0}
+
+  /* COUNTDOWN */
+  .band{background:#6a2420;color:#fff;font-size:40px;padding:20px 0;margin:0 -18px}
+  .cd{display:flex;justify-content:center;gap:12px;margin-top:22px}
+  .cd div{background:var(--red2);color:#fff;width:70px;padding:10px 0;border-radius:12px;font-family:"Barlow Semi Condensed",sans-serif}
+  .cd b{display:block;font-size:26px;font-weight:600}
+  .cd span{font-size:15px}
+
+  /* RSVP */
+  .rsvp p{font-size:18px;line-height:1.5}
+  .rsvp .btns{display:flex;gap:12px;justify-content:center;margin:20px 0}
+  .gift{width:150px;height:150px;margin:10px auto 0;cursor:pointer;background:url("https://content.pancake.vn/1/s579x579/fwebp90/ab/64/dd/80/34ba997b8f63e827b865bada48c3e8601cf60b91263ba0820621fbab-w:2500-h:2500-l:587823-t:image/png.png") center/contain no-repeat;animation:wob 2.4s infinite}
+  @keyframes wob{0%,100%{transform:rotate(0)}10%{transform:rotate(-8deg)}20%{transform:rotate(8deg)}30%{transform:rotate(-4deg)}40%{transform:rotate(0)}}
+  .gift-cap{font-size:20px}
+
+  /* CALENDAR */
+  .cal h3{font-size:24px;font-weight:700;letter-spacing:1px}
+  .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px 0;margin-top:16px;font-size:17px}
+  .grid .h{font-weight:700;color:var(--red)}
+  .grid .o{opacity:.35}
+  .grid .on{position:relative;color:#fff;font-weight:700;z-index:0}
+  .grid .on::before{content:"\2665";position:absolute;left:50%;top:50%;font-size:44px;line-height:1;color:#c8202a;transform:translate(-50%,-54%);z-index:-1;animation:beatc 1.4s infinite}
+  @keyframes beatc{0%,100%{transform:translate(-50%,-54%) scale(1)}50%{transform:translate(-50%,-54%) scale(1.15)}}
+  .grid div{padding:6px 0}
+
+  /* ALBUM */
+  .album h2{font-size:42px;font-weight:400}
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+  .gal img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:4px;cursor:zoom-in;transition:transform .3s}
+  .gal img:hover{transform:scale(1.03)}
+  .gal img.wide{grid-column:span 2;aspect-ratio:4/5}
+
+  /* THANKS */
+  .thanks h2{font-size:40px;font-weight:400;color:var(--red)}
+  .thanks p{font-size:17px;line-height:1.6;margin-top:12px;font-style:italic}
+  .thanks .sig{font-size:36px;margin-top:10px;line-height:1.2}
+  .final{padding:0;position:relative}
+  .final img{width:100%;aspect-ratio:2/3;object-fit:cover}
+  .final .cap{position:absolute;left:0;right:0;bottom:0;padding:70px 20px 26px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+  .final .cap .script{font-size:30px;line-height:1.2}
+  .final .cap p{font-size:16px;margin-top:8px;font-style:italic}
+
+  /* MODALS */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+  .modal.open{display:flex}
+  .box{background:#fffaf2;width:100%;max-width:380px;border-radius:12px;padding:22px 18px;position:relative;max-height:90vh;overflow:auto;text-align:center}
+  .box h3{font-family:"Barlow Semi Condensed",sans-serif;color:var(--red2);font-size:22px;margin-bottom:14px}
+  .box .x{position:absolute;right:10px;top:6px;font-size:28px;border:0;background:none;cursor:pointer;color:#555}
+  .box label{display:block;text-align:left;font-family:Roboto,sans-serif;font-size:14px;margin:10px 0 4px;color:#444}
+  .box input,.box select,.box textarea{width:100%;padding:10px;border:1px solid #d6c9b5;border-radius:6px;font:15px Roboto,sans-serif;background:#fff}
+  .box textarea{min-height:90px;resize:vertical}
+  .box .btn{margin-top:16px;width:100%}
+  .bank{background:#fff;border:1px dashed #c9a;border-radius:10px;padding:14px;margin-top:10px;font-family:Roboto,sans-serif;font-size:15px;line-height:1.7}
+  .bank .qr{width:180px;height:180px;margin:8px auto;background:#eee;display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;border-radius:8px}
+  .lightbox{background:rgba(0,0,0,.9)}
+  .lightbox img{max-height:90vh;max-width:100%;border-radius:4px}
+  .toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#333;color:#fff;padding:10px 18px;border-radius:20px;font:14px Roboto,sans-serif;opacity:0;transition:.3s;z-index:60;pointer-events:none}
+  .toast.show{opacity:1}
+
+  /* wishes list */
+  .wishes{margin-top:18px;text-align:left;max-height:220px;overflow:auto}
+  .wish{background:rgba(255,255,255,.7);border-radius:8px;padding:8px 12px;margin-bottom:8px;font-family:Roboto,sans-serif;font-size:14px}
+  .wish b{color:var(--red2)}
+
+  /* MUSIC + HEARTS */
+  .music{position:fixed;left:14px;bottom:14px;width:44px;height:44px;border-radius:50%;background:var(--red2);color:#fff;border:0;z-index:40;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.3)}
+  .music.playing svg{animation:spin 4s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .heart{position:fixed;top:-30px;z-index:30;pointer-events:none;color:#f38fb0;animation:fall linear forwards}
+  @keyframes fall{to{transform:translateY(110vh) rotate(260deg);opacity:.2}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="corner"></div>
+    <div class="arch-wrap rv z">
+      <svg class="savedate" viewBox="0 0 200 200"><defs><path id="arc" d="M10,40 A95,95 0 0 1 160,190"/></defs><text><textPath href="#arc">Save the Date</textPath></text></svg>
+      <div class="fl tl"></div>
+      <div class="arch"><img src="https://content.pancake.vn/1/s670x1006/fwebp90/29/d7/c1/a6/a608e15b9ccf600ab03b7505645fae2a358e32932bd82561fe81e189-w:853-h:1280-l:238707-t:image/jpeg.jpg" alt="Ảnh cưới"></div>
+      <div class="fl br"></div>
+    </div>
+    <h1 class="rv">LỄ THÀNH HÔN</h1>
+    <div class="names script rv">Việt Hoàng<span>&</span>Thu Huệ</div>
+    <div class="corner b"></div>
+  </section>
+
+  <!-- FAMILY -->
+  <section>
+    <p class="quote dance rv">“Hôn nhân là chuyện cả đời,<br>Yêu người vừa ý, Cưới người mình thương”</p>
+    <div class="fam">
+      <div class="ph rv l"><img src="https://content.pancake.vn/1/s651x977/fwebp90/bf/77/a0/c3/832a146cf7877eec3cff753cf4509327c6bad6b78422ff350abd45dd-w:853-h:1280-l:171687-t:image/jpeg.jpg" alt="Chú rể"></div>
+      <div class="info rv r">
+        <h3>NHÀ TRAI</h3>
+        <div class="par">Ông: Đàm Đức Hùng<br>Bà: Trần Thị Bắc</div>
+        <div class="addr">Địa chỉ: Thôn Hoà Bình Hạ, Xã Tân Tiến, Huyện Văn Giang, Tỉnh Hưng Yên.</div>
+        <div class="role">Chú Rể</div>
+        <div class="who script">Việt Hoàng</div>
+      </div>
+    </div>
+    <div class="heart-print" style="right:20px;top:48%"></div>
+    <div class="fam rev" style="margin-top:28px">
+      <div class="ph rv r"><img src="https://content.pancake.vn/1/s579x869/fwebp90/a4/81/81/24/d630878006136be008ee7a5bb9b1b4039b6e1cf95ba0d312011d407d-w:853-h:1280-l:108723-t:image/jpeg.jpg" alt="Cô dâu"></div>
+      <div class="info rv l">
+        <h3>NHÀ GÁI</h3>
+        <div class="par">Ông: Hoàng Văn Thăng<br>Bà: Nguyễn Thị Hoa</div>
+        <div class="addr">Địa chỉ: Thôn Rưỡng Trực 2, Xã Nam Thắng, Huyện Tiền Hải, Tỉnh Thái Bình.</div>
+        <div class="role">Cô Dâu</div>
+        <div class="who script">Thu Huệ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVITATION + EVENTS -->
+  <section>
+    <div class="trio rv z">
+      <div class="p p1"><img src="https://content.pancake.vn/1/s573x860/fwebp90/0b/cd/28/e4/21d33ccecc83dd1eed73184d9421a56bac8a8f1f56085c5107ca8f09-w:853-h:1280-l:259885-t:image/jpeg.jpg" alt=""></div>
+      <div class="p p2"><img src="https://content.pancake.vn/1/s558x838/fwebp90/59/49/f5/21/c175cab90eea40d4f5f54d01cfd83649667834038cc036eabfca31d1-w:853-h:1280-l:256136-t:image/jpeg.jpg" alt=""></div>
+      <div class="p p3"><img src="https://content.pancake.vn/1/s591x887/fwebp90/b2/b1/5c/b9/1c2eaf52d5269af4739a23ed27af03afad4c225e735490e149484fd6-w:853-h:1280-l:340655-t:image/jpeg.jpg" alt=""></div>
+    </div>
+    <div class="invite-title script rv">Trân Trọng Kính Mời</div>
+    <div class="invite-sub rv">THAM DỰ LỄ THÀNH HÔN VIỆT HOÀNG &amp; THU HUỆ</div>
+
+    <div class="event rv">
+      <div class="t dance">Tiệc Mừng Lễ Thành Hôn</div>
+      <div class="lead">Vào Lúc</div>
+      <div class="when"><div class="hr">18 Giờ 00</div><div class="d"><small>Thứ Hai</small><b>12</b><small>Tháng 01 · Năm 2026</small></div></div>
+      <div class="lunar">( Nhằm Ngày 24 tháng 11 năm Ất Tỵ.)</div>
+      <div class="place">Tại Tư Gia Của Nhà Trai</div>
+      <div class="addr2">Địa chỉ: Thôn Hoà Bình Hạ,<br>Xã Tân Tiến, Huyện Văn Giang, Tỉnh Hưng Yên.</div>
+      <div class="divider"></div>
+    </div>
+
+    <div class="event rv">
+      <div class="t dance">Lễ Thành Hôn</div>
+      <div class="lead">Vào Lúc</div>
+      <div class="when"><div class="hr">10 Giờ 00</div><div class="d"><small>Thứ Ba</small><b>13</b><small>Tháng 01 · Năm 2026</small></div></div>
+      <div class="lunar">( Nhằm Ngày 25 tháng 11 năm Ất Tỵ.)</div>
+      <div class="place">Tại Tư Gia Nhà Trai</div>
+      <div class="addr2">Địa chỉ: Thôn Hoà Bình Hạ,<br>Xã Tân Tiến, Huyện Văn Giang, Tỉnh Hưng Yên.</div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="loc">
+    <h2 class="script rv">Địa điểm tổ chức</h2>
+    <p class="barlow rv" style="margin-top:6px">Tại Tư Gia Nhà Trai</p>
+    <p class="barlow rv">Địa chỉ: Thôn Hoà Bình Hạ,<br>Xã Tân Tiến, Huyện Văn Giang, Tỉnh Hưng Yên.</p>
+    <a class="btn rv" style="margin-top:16px" href="https://maps.app.goo.gl/4Z9AAAL1rupM3oh99" target="_blank" rel="noopener">Xem Chỉ Đường</a>
+    <div class="map rv"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4624.313894319269!2d105.96085797599675!3d20.927424991249932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU1JzM4LjciTiAxMDXCsDU3JzQ4LjQiRQ!5e1!3m2!1svi!2s!4v1767506623666!5m2!1svi!2s"></iframe></div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section style="padding-top:0">
+    <div class="band dance">Wedding Countdown</div>
+    <div class="cd rv">
+      <div><b id="cdD">00</b><span>Ngày</span></div>
+      <div><b id="cdH">00</b><span>Giờ</span></div>
+      <div><b id="cdM">00</b><span>Phút</span></div>
+      <div><b id="cdS">00</b><span>Giây</span></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp">
+    <p class="rv">Cảm ơn tất cả tình cảm mà mọi người đã dành cho chúng mình &amp; Hãy xác nhận sự có mặt của mọi người để gia đình chuẩn bị đón tiếp một cách chu đáo nhất.<br>Trân trọng!</p>
+    <div class="btns rv">
+      <button class="btn" data-open="mRsvp">Xác nhận tham dự</button>
+      <button class="btn" data-open="mWish">Gửi Lời Chúc</button>
+    </div>
+    <div class="gift-cap script rv" style="font-size:30px">Gửi Quà Mừng Cưới</div>
+    <div class="gift" data-open="mGift" title="Gửi quà mừng cưới"></div>
+    <p class="barlow" style="font-size:15px">Chạm Vào Hộp Quà Để Gửi Quà Mừng Cưới</p>
+    <div class="wishes" id="wishList"></div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section class="cal">
+    <h3 class="rv">THÁNG 1 - NĂM 2026</h3>
+    <div class="grid rv" id="cal"></div>
+  </section>
+
+  <!-- ALBUM -->
+  <section class="album">
+    <h2 class="script rv">Album ảnh cưới</h2>
+    <div class="gal" id="gal"></div>
+  </section>
+
+  <!-- THANKS -->
+  <section class="thanks">
+    <h2 class="script rv">Rất Hân Hạnh Được Đón Tiếp</h2>
+    <p class="rv">“Gửi đến những người thân yêu nhất trong cuộc đời. Chúng mình vô cùng biết ơn vì bạn đã dành thời gian quý báu để đến chung vui trong ngày trọng đại của chúng mình. Với sự chứng kiến và những lời chúc phúc của bạn, khoảnh khắc này trở nên vô cùng ấm áp và trọn vẹn. Dù lễ cưới chỉ là một khoảnh khắc ngắn ngủi, nhưng tình nghĩa và những kỷ niệm sẽ mãi theo chúng mình suốt cuộc đời.”</p>
+    <div class="sig script rv">Việt Hoàng &amp; Thu Huệ</div>
+  </section>
+
+  <section class="final">
+    <img src="https://content.pancake.vn/1/s843x1265/fwebp90/05/34/ba/ce/ade47f475f2d45d2ad63518c3d5c667997d8add10e6040c51c4f38ac-w:853-h:1280-l:137443-t:image/jpeg.jpg" alt="">
+    <div class="cap">
+      <div class="script">At this moment,<br>love and being loved happen at the same time.</div>
+      <p>“Ngay giây phút này, chúng ta vừa yêu, và vừa được yêu. 💕”</p>
+    </div>
+  </section>
+</div>
+
+<!-- RSVP modal -->
+<div class="modal" id="mRsvp"><div class="box">
+  <button class="x" data-close>&times;</button>
+  <h3>XÁC NHẬN THAM DỰ</h3>
+  <form id="fRsvp">
+    <label>Tên của bạn</label><input name="name" required>
+    <label>Bạn Là Khách Mời Của Ai</label>
+    <select name="side"><option>Chú Rể</option><option>Cô Dâu</option></select>
+    <label>Xác Nhận Tham Dự?</label>
+    <select name="attend"><option>Có, mình sẽ đến tham dự</option><option>Thật tiếc hôm đấy mình bận chút việc không thể đến tham dự được rồi, thông cảm giúp mình nhé!</option></select>
+    <label>Số Lượng Người Tham Dự?</label>
+    <select name="count"><option>0</option><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>
+    <button class="btn" type="submit">Gửi Xác Nhận</button>
+  </form>
+</div></div>
+
+<!-- Wish modal -->
+<div class="modal" id="mWish"><div class="box">
+  <button class="x" data-close>&times;</button>
+  <h3>GỬI LỜI CHÚC MỪNG</h3>
+  <form id="fWish">
+    <label>Tên của bạn</label><input name="name" required>
+    <label>Lời chúc</label><textarea name="msg" required placeholder="Gửi lời chúc đến cô dâu chú rể..."></textarea>
+    <button class="btn" type="submit">Gửi Lời Chúc</button>
+  </form>
+</div></div>
+
+<!-- Gift modal -->
+<div class="modal" id="mGift"><div class="box">
+  <button class="x" data-close>&times;</button>
+  <h3>GỬI QUÀ MỪNG CƯỚI</h3>
+  <div class="bank"><b>Chú Rể – Việt Hoàng</b><div class="qr">Thay ảnh QR tại đây</div>Ngân hàng: …<br>STK: …</div>
+  <div class="bank"><b>Cô Dâu – Thu Huệ</b><div class="qr">Thay ảnh QR tại đây</div>Ngân hàng: …<br>STK: …</div>
+</div></div>
+
+<!-- Lightbox -->
+<div class="modal lightbox" id="mLb" data-close><img id="lbImg" alt=""></div>
+
+<div class="toast" id="toast"></div>
+<button class="music" id="music" aria-label="Bật/tắt nhạc"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg></button>
+<audio id="bgm" loop preload="none" src="https://media.elisawedding.click/le_duong.mp3"></audio>
+
+<script>
+  // ===== Config =====
+  const WEDDING = new Date('2026-01-13T10:00:00+07:00');
+  const PHOTOS = [
+    'https://content.pancake.vn/1/s843x1265/fwebp90/05/34/ba/ce/ade47f475f2d45d2ad63518c3d5c667997d8add10e6040c51c4f38ac-w:853-h:1280-l:137443-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s670x1006/fwebp90/29/d7/c1/a6/a608e15b9ccf600ab03b7505645fae2a358e32932bd82561fe81e189-w:853-h:1280-l:238707-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s605x908/fwebp90/6b/2e/16/61/49c7ef59bea97477359f06a9177e4b7f86a4df483c5d90ea43667140-w:853-h:1280-l:102051-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s591x887/fwebp90/b2/b1/5c/b9/1c2eaf52d5269af4739a23ed27af03afad4c225e735490e149484fd6-w:853-h:1280-l:340655-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s573x860/fwebp90/0b/cd/28/e4/21d33ccecc83dd1eed73184d9421a56bac8a8f1f56085c5107ca8f09-w:853-h:1280-l:259885-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s558x838/fwebp90/59/49/f5/21/c175cab90eea40d4f5f54d01cfd83649667834038cc036eabfca31d1-w:853-h:1280-l:256136-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s651x977/fwebp90/bf/77/a0/c3/832a146cf7877eec3cff753cf4509327c6bad6b78422ff350abd45dd-w:853-h:1280-l:171687-t:image/jpeg.jpg',
+    'https://content.pancake.vn/1/s579x869/fwebp90/a4/81/81/24/d630878006136be008ee7a5bb9b1b4039b6e1cf95ba0d312011d407d-w:853-h:1280-l:108723-t:image/jpeg.jpg'
+  ];
+
+  // Countdown
+  const pad = n => String(n).padStart(2, '0');
+  function tick(){
+    let s = Math.max(0, Math.floor((WEDDING - Date.now()) / 1000));
+    cdD.textContent = pad(Math.floor(s / 86400)); s %= 86400;
+    cdH.textContent = pad(Math.floor(s / 3600)); s %= 3600;
+    cdM.textContent = pad(Math.floor(s / 60));
+    cdS.textContent = pad(s % 60);
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Calendar Jan 2026 (starts Thursday)
+  (function(){
+    const heads = ['T2','T3','T4','T5','T6','T7','CN'];
+    let html = heads.map(h => `<div class="h">${h}</div>`).join('');
+    const first = (new Date(2026,0,1).getDay() + 6) % 7; // Monday-based
+    const prevLast = 31;
+    for (let i = first - 1; i >= 0; i--) html += `<div class="o">${prevLast - i}</div>`;
+    for (let d = 1; d <= 31; d++) html += `<div class="${d===12||d===13?'on':''}">${d}</div>`;
+    const total = first + 31, rest = (7 - total % 7) % 7;
+    for (let d = 1; d <= rest; d++) html += `<div class="o">${d}</div>`;
+    document.getElementById('cal').innerHTML = html;
+  })();
+
+  // Album
+  const gal = document.getElementById('gal');
+  PHOTOS.forEach((src, i) => {
+    const im = new Image(); im.src = src; im.loading = 'lazy'; im.alt = 'Ảnh cưới ' + (i+1);
+    im.className = 'rv' + (i === 0 ? ' wide' : '');
+    im.onclick = () => { lbImg.src = src; open('mLb'); };
+    gal.appendChild(im);
+  });
+
+  // Modals
+  function open(id){ document.getElementById(id).classList.add('open'); }
+  function close(el){ el.closest('.modal').classList.remove('open'); }
+  document.querySelectorAll('[data-open]').forEach(b => b.onclick = () => open(b.dataset.open));
+  document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => {
+    if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open');
+  }));
+
+  function toast(t){ const el = document.getElementById('toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2500); }
+
+  // Wishes stored locally (replace with your backend / Google Sheet if needed)
+  const store = {
+    get(k){ try { return JSON.parse(localStorage.getItem(k)) || []; } catch(e){ return []; } },
+    set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+  };
+  function esc(s){ return s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function renderWishes(){
+    wishList.innerHTML = store.get('wishes').slice().reverse().map(w => `<div class="wish"><b>${esc(w.name)}</b>: ${esc(w.msg)}</div>`).join('');
+  }
+  renderWishes();
+  fWish.onsubmit = e => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(fWish));
+    const list = store.get('wishes'); list.push(d); store.set('wishes', list);
+    fWish.reset(); close(fWish); renderWishes(); toast('Cảm ơn lời chúc của bạn! 💕');
+  };
+  fRsvp.onsubmit = e => {
+    e.preventDefault();
+    const list = store.get('rsvp'); list.push(Object.fromEntries(new FormData(fRsvp))); store.set('rsvp', list);
+    fRsvp.reset(); close(fRsvp); toast('Đã gửi xác nhận. Cảm ơn bạn!');
+  };
+
+  // Reveal on scroll
+  history.scrollRestoration = 'manual'; window.scrollTo(0, 0);
+  document.querySelectorAll('.hero .rv').forEach(el => requestAnimationFrame(() => el.classList.add('in')));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.15});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // Music (starts on first interaction, browsers block autoplay)
+  const bgm = document.getElementById('bgm'), mBtn = document.getElementById('music');
+  function setPlay(p){ p ? bgm.play().then(()=>mBtn.classList.add('playing')).catch(()=>{}) : (bgm.pause(), mBtn.classList.remove('playing')); }
+  mBtn.onclick = e => { e.stopPropagation(); setPlay(bgm.paused); };
+  document.addEventListener('click', function first(){ if (bgm.paused) setPlay(true); document.removeEventListener('click', first); }, {once:true});
+
+  // Falling hearts
+  setInterval(() => {
+    const h = document.createElement('div'); h.className = 'heart'; h.textContent = '❤';
+    h.style.left = Math.random() * 100 + 'vw';
+    h.style.fontSize = (12 + Math.random() * 14) + 'px';
+    h.style.animationDuration = (6 + Math.random() * 5) + 's';
+    document.body.appendChild(h); setTimeout(() => h.remove(), 12000);
+  }, 900);
+</script>
+</body>
+</html>
