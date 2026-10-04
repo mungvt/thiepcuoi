@@ -101,9 +101,6 @@
   /* RSVP */
   .rsvp p{font-size:18px;line-height:1.5}
   .rsvp .btns{display:flex;gap:12px;justify-content:center;margin:20px 0}
-  .gift{width:150px;height:150px;margin:10px auto 0;cursor:pointer;background:url("https://content.pancake.vn/1/s579x579/fwebp90/ab/64/dd/80/34ba997b8f63e827b865bada48c3e8601cf60b91263ba0820621fbab-w:2500-h:2500-l:587823-t:image/png.png") center/contain no-repeat;animation:wob 2.4s infinite}
-  @keyframes wob{0%,100%{transform:rotate(0)}10%{transform:rotate(-8deg)}20%{transform:rotate(8deg)}30%{transform:rotate(-4deg)}40%{transform:rotate(0)}}
-  .gift-cap{font-size:20px}
 
   /* CALENDAR */
   .cal h3{font-size:24px;font-weight:700;letter-spacing:1px}
@@ -143,8 +140,6 @@
   .box input,.box select,.box textarea{width:100%;padding:10px;border:1px solid #d6c9b5;border-radius:6px;font:15px Roboto,sans-serif;background:#fff}
   .box textarea{min-height:90px;resize:vertical}
   .box .btn{margin-top:16px;width:100%}
-  .bank{background:#fff;border:1px dashed #c9a;border-radius:10px;padding:14px;margin-top:10px;font-family:Roboto,sans-serif;font-size:15px;line-height:1.7}
-  .bank .qr{width:180px;height:180px;margin:8px auto;background:#eee;display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;border-radius:8px}
   .lightbox{background:rgba(0,0,0,.9)}
   .lightbox img{max-height:90vh;max-width:100%;border-radius:4px}
   .toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#333;color:#fff;padding:10px 18px;border-radius:20px;font:14px Roboto,sans-serif;opacity:0;transition:.3s;z-index:60;pointer-events:none}
@@ -263,9 +258,6 @@
       <button class="btn" data-open="mRsvp">Xác nhận tham dự</button>
       <button class="btn" data-open="mWish">Gửi Lời Chúc</button>
     </div>
-    <div class="gift-cap script rv" style="font-size:30px">Gửi Quà Mừng Cưới</div>
-    <div class="gift" data-open="mGift" title="Gửi quà mừng cưới"></div>
-    <p class="barlow" style="font-size:15px">Chạm Vào Hộp Quà Để Gửi Quà Mừng Cưới</p>
     <div class="wishes" id="wishList"></div>
   </section>
 
@@ -322,14 +314,6 @@
     <label>Lời chúc</label><textarea name="msg" required placeholder="Gửi lời chúc đến cô dâu chú rể..."></textarea>
     <button class="btn" type="submit">Gửi Lời Chúc</button>
   </form>
-</div></div>
-
-<!-- Gift modal -->
-<div class="modal" id="mGift"><div class="box">
-  <button class="x" data-close>&times;</button>
-  <h3>GỬI QUÀ MỪNG CƯỚI</h3>
-  <div class="bank"><b>Chú Rể – Tiến Mừng</b><div class="qr">Thay ảnh QR tại đây</div>Ngân hàng: …<br>STK: …</div>
-  <div class="bank"><b>Cô Dâu – Mai Anh</b><div class="qr">Thay ảnh QR tại đây</div>Ngân hàng: …<br>STK: …</div>
 </div></div>
 
 <!-- Lightbox -->
