@@ -1,4 +1,4 @@
-# Thiệp cưới online – Việt Hoàng & Thu Huệ
+# Thiệp cưới online
 
 Thiệp mời cưới dạng web một trang (HTML/CSS/JS thuần, không cần build).
 
