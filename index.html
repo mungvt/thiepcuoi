@@ -373,16 +373,25 @@
 
   function toast(t){ const el = document.getElementById('toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2500); }
 
-  // Wishes stored locally (replace with your backend / Google Sheet if needed)
   const store = {
     get(k){ try { return JSON.parse(localStorage.getItem(k)) || []; } catch(e){ return []; } },
     set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
   };
   function esc(s){ return s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  // Everyone's wishes come from the Google Sheet; fall back to this guest's own wishes if it can't be read
+  let wishes = null;
   function renderWishes(){
-    wishList.innerHTML = store.get('wishes').slice().reverse().map(w => `<div class="wish"><b>${esc(w.name)}</b>: ${esc(w.msg)}</div>`).join('');
+    const list = wishes || store.get('wishes').slice().reverse();
+    wishList.innerHTML = list.map(w => `<div class="wish"><b>${esc(String(w.name))}</b>: ${esc(String(w.msg))}</div>`).join('');
   }
-  renderWishes();
+  async function loadWishes(){
+    try {
+      const r = await fetch(SHEET_URL + '?type=wishes&t=' + Date.now());
+      const data = await r.json();
+      if (Array.isArray(data)) { wishes = data; renderWishes(); }
+    } catch (e) {}
+  }
+  renderWishes(); loadWishes();
   // Send to Google Sheets (Apps Script web app)
   async function send(form, type){
     const btn = form.querySelector('button[type=submit]');
@@ -397,7 +406,9 @@
     const d = Object.fromEntries(new FormData(fWish));
     if (!await send(fWish, 'wish')) return;
     const list = store.get('wishes'); list.push(d); store.set('wishes', list);
+    if (wishes) wishes.unshift(d);
     fWish.reset(); close(fWish); renderWishes(); toast('Cảm ơn lời chúc của bạn! 💕');
+    setTimeout(loadWishes, 3000);
   };
   fRsvp.onsubmit = async e => {
     e.preventDefault();
