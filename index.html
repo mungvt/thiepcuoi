@@ -326,6 +326,7 @@
 <script>
   // ===== Config =====
   const WEDDING = new Date('2027-01-17T14:00:00+07:00');
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxcy2nCdb5rIgG1liCIcNg9f0wPF3O4G_WumiJ7v-2SQSjDXLnZgiMyxzxmeEL1q3n_/exec';
   const PHOTOS = ['a01','a02','a03','a04','a05','a06','a07','a09','a10','a08'].map(n => 'images/' + n + '.jpg');
 
   // Countdown
@@ -382,15 +383,25 @@
     wishList.innerHTML = store.get('wishes').slice().reverse().map(w => `<div class="wish"><b>${esc(w.name)}</b>: ${esc(w.msg)}</div>`).join('');
   }
   renderWishes();
-  fWish.onsubmit = e => {
+  // Send to Google Sheets (Apps Script web app)
+  async function send(form, type){
+    const btn = form.querySelector('button[type=submit]');
+    const body = new URLSearchParams(new FormData(form)); body.append('type', type);
+    btn.disabled = true; const label = btn.textContent; btn.textContent = 'Đang gửi...';
+    try { await fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body }); return true; }
+    catch (err) { toast('Gửi không thành công, vui lòng thử lại!'); return false; }
+    finally { btn.disabled = false; btn.textContent = label; }
+  }
+  fWish.onsubmit = async e => {
     e.preventDefault();
     const d = Object.fromEntries(new FormData(fWish));
+    if (!await send(fWish, 'wish')) return;
     const list = store.get('wishes'); list.push(d); store.set('wishes', list);
     fWish.reset(); close(fWish); renderWishes(); toast('Cảm ơn lời chúc của bạn! 💕');
   };
-  fRsvp.onsubmit = e => {
+  fRsvp.onsubmit = async e => {
     e.preventDefault();
-    const list = store.get('rsvp'); list.push(Object.fromEntries(new FormData(fRsvp))); store.set('rsvp', list);
+    if (!await send(fRsvp, 'rsvp')) return;
     fRsvp.reset(); close(fRsvp); toast('Đã gửi xác nhận. Cảm ơn bạn!');
   };
 
